@@ -23,7 +23,7 @@ const Gewinnspiel = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Tipp erfolgreich abgesendet!");
+    alert("Ihr Tipp wurde erfolgreich abgesendet!");
   };
 
   return (

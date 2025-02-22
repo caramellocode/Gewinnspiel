@@ -1,0 +1,1 @@
+import{j as t}from"./index-7fdf2e3d.js";const i=()=>t.jsx("div",{className:"w-full",style:{marginBottom:-88,paddingBottom:0},children:t.jsx("iframe",{src:"https://staging.gcli.li",width:"100%",height:"600px",style:{border:"none",display:"block"},title:"Staging GCLI"})});export{i as default};
