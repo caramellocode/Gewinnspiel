@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.jackpot-value {
+  /* color: rgb(0, 255, 119); */
+  /* padding-left: 70%; */
+  /* background-image: url('/images/home-1/cloverlink.png'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; Bild wird skaliert, um den Container zu füllen */
+  position: relative;
+  color: aliceblue;
+}
+
+.AnimatedNumberItem {
+  font-family: "Lobster", sans-serif !important;
+  font-weight: 200;
+}
+
+.jackpot-bg {
+  /* background-image: url('/dist/images/home-1/Jackpot-09.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30%; */
+  position: relative;
+}
+
+.star-icon {
+  position: absolute;
+  top: -25px;
+  right: -27px;
+  width: 30px;
+  /* Anpassen der Größe des Icons */
+  height: 30px;
+  background-image: url('/public/images/home-1/star.png');
+  background-size: cover;
+  animation: blink 1s infinite;
+  /* Animation für das Blinken */
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+
+.silver-border {
+  border: 1px solid silver !important;
+
+  border-radius: 8px;
+  width: 400px;
+}
+
+.jackpot-bg {
+  display: flex;
+  align-items: center;
+  border: 1px solid silver; /* Dünne silbergraue Linie */
+  border-radius: 1px; /* Abgerundete Ecken */
+}
+
+.jackpot-headline {
+  color: #dedddb; /* Goldene Farbe */
+  text-align: center; /* Zentriert die Überschrift */
+  font-size: 2.5rem; /* Passe die Schriftgröße an */
+  
+  margin-bottom: 30px; /* Platz unter der Überschrift */
+}
+
+.jackpot-section {
+  background-color: #1a1a1a; /* Dunkler Hintergrund, der immer gleich bleibt */
+}
+  

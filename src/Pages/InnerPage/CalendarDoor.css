@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
+body {
+  font-family: "Lobster", cursive;
+  background: url(http://static.pexels.com/wp-content/uploads/2014/08/cold-firs-forest-2505.jpg);
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+}
+
+.calendar-wrap {
+  width: 200px;
+  height: 150px;
+  color: #fff;
+  font-size: 38px;
+  position: relative;
+  margin: 10vh auto;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(135deg, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+  background-size: cover;
+  border: 15px solid #fff;
+  padding: 50px 0 0 0;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.calendar-wrap:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.animated-title {
+  animation: rubberBand infinite 2s;
+}
+
+.calendar-day {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 200px;
+  line-height: 180px;
+  text-align: center;
+  z-index: 100;
+  font-weight: bold;
+  color: #fff;
+  font-size: 72px;
+  text-shadow: -4px 3px 0 rgba(255, 255, 255, 0.4);
+}
+
+.left-door,
+.right-door {
+  width: 100px;
+  height: 200px;
+  background: #d91031;
+  position: absolute;
+  top: 0;
+  border: 10px solid #950d23;
+  box-sizing: border-box;
+}
+
+.left-door {
+  left: 0;
+  animation: open-left 4s cubic-bezier(0.06, 0.63, 0, 1) 1 forwards;
+}
+
+.right-door {
+  right: 0;
+  animation: open-right 4s cubic-bezier(0.06, 0.63, 0, 1) 1 forwards;
+}
+
+.door-panel {
+  width: 60px;
+  height: 160px;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Door animations */
+@keyframes open-left {
+  from {
+    transform: perspective(500px) rotateY(0deg);
+    transform-origin: left center;
+  }
+  to {
+    transform: perspective(500px) rotateY(-110deg);
+    transform-origin: left center;
+    background: #a70a24;
+    box-shadow: 10px 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes open-right {
+  from {
+    transform: perspective(500px) rotateY(0deg);
+    transform-origin: right center;
+  }
+  to {
+    transform: perspective(500px) rotateY(110deg);
+    transform-origin: right center;
+    background: #a70a24;
+    box-shadow: -10px 0 5px rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,93 @@
+@keyframes rainFall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0.5;
+    }
+  }
+  
+  .coin {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-image: url('/images/home-1/ccoin.png.png');
+    background-size: cover;
+    border-radius: 50%;
+    top: -50px;  
+    z-index: 1000;
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Weiß mit 90% Opazität */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1500;
+    border-radius: 8px; /* Optional: weiche Ecken */
+  }
+  
+  .photos img {
+    width: 100%;  
+    margin-bottom: 10px;
+    border-radius: 15px;
+  }
+
+  .button {
+    background-color: #FFD700; /* Goldfarbene Hintergrundfarbe */
+    color: #FFFFFF; /* Weiße Schriftfarbe */
+    border: none;
+    padding: 10px 20px; /* Größere Padding-Werte für einen größeren Button */
+    font-size: 16px; /* Geeignete Schriftgröße */
+    font-weight: bold; /* Fett gedruckter Text */
+    border-radius: 10px; /* Abrundung der Ecken */
+    box-shadow: 0 4px #B8860B; /* Dunkleres Gold für den Schatten für 3D-Effekt */
+    cursor: pointer; /* Cursor ändert sich zum Klicken */
+    transition: all 0.3s ease; /* Weicher Übergang für Hover-Effekte */
+  }
+  
+  .button:hover {
+    background-color: #FFD700; /* Etwas hellere Goldfarbe beim Hover */
+    box-shadow: 0 6px #FFA500; /* Höherer Schatten für Hover, gibt einen "angehobenen" Effekt */
+    transform: translateY(-2px); /* Verschiebt den Button nach oben beim Hover */
+  }
+  
+  .button:active {
+    box-shadow: 0 2px #B8860B; /* Reduzierter Schatten beim Klicken */
+    transform: translateY(1px); /* Verschiebt den Button leicht nach unten, wenn er gedrückt wird */
+  }
+
+  @media (max-width: 500px) {
+    .py-20 {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      padding-left: 26px;
+      width: -webkit-fill-available;
+      margin-left: 10px;
+    }
+    .pt-24 {
+      /* padding-top: 6rem; */
+      padding-bottom: 14px;
+    }
+
+    .lg\:w-1\/2 {
+      width: 95%;
+    }
+  }
+
+  .arrow-button .HiArrowLongRight {
+    transition: color 0.3s;
+  }
+  
+  .arrow-button:hover .HiArrowLongRight {
+    color: khaki;
+  }
+  
+  

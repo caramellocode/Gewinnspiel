@@ -1,0 +1,301 @@
+.gallery-container {
+  background-color: #01053f !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#tiles > span {
+  flex: 1 1 0;
+  font: bold 48px 'Droid Sans', Arial, sans-serif;
+  text-align: center;
+  color: #111;
+  background-color: #ddd;
+  background-image: -o-linear-gradient(top, #bbb, #eee);
+  border-top: 1px solid #fff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+  margin: 0 7px;
+  /* padding: 18px 0; */
+  display: inline-block;
+  position: relative;
+  margin-top: 36px;
+}
+
+
+
+
+.star {
+  position: absolute;
+  width: 50px; /* Passe die Größe nach Bedarf an */
+  height: 50px; /* Passe die Größe nach Bedarf an */
+  z-index: 10;
+  padding-bottom: 120px;
+}
+
+.header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.header img {
+  max-width: 90%;
+  max-height: 300px; /* Set the maximum height */
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 160px;
+}
+
+.responsive-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.responsive-section img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/* Default styles for larger screens */
+.responsive-section .container {
+  padding: 20px;
+  text-align: left; /* Left-align text */
+}
+
+.responsive-section h1 {
+  font-size: 2em; /* Increase font size for header */
+  margin-bottom: 20px; /* Increase space below the header */
+}
+
+.discount {
+  color: white;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.item-large {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+.item-small {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(231, 217, 217, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+}
+
+.item:hover .tooltip {
+  display: block;
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+}
+
+.img-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 30%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-decoration: none; /* Verhindert Unterstreichung von Links */
+  color: inherit; /* Übernimmt die Farbe des Elternelements */
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure images cover the area */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content p {
+  margin-bottom: 20px; /* Einheitlicher Abstand zum Button */
+}
+
+.card-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(16, 73, 124);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Einheitlicher Abstand zum vorherigen Element */
+}
+
+.card-button:hover {
+  background-color: rgb(10, 50, 85);
+}
+
+/* Media Queries für die Kartenanordnung */
+@media (max-width: 800px) {
+  .card {
+    width: 45%; /* Zwei Karten nebeneinander */
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 100%; /* Eine Karte pro Zeile */
+  }
+}
+
+/* Media Queries für Textanpassungen bei kleineren Bildschirmen */
+@media (max-width: 654px) {
+  .responsive-section .container,
+  .card-content {
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: 100%; /* Set maximum width to full width */
+  }
+
+  .responsive-section h1 {
+    font-size: 1.2em; /* Kleinere Schriftgröße für Überschriften */
+    white-space: nowrap; /* Verhindert Zeilenumbruch */
+    overflow: hidden; /* Verhindert Überlauf */
+    text-overflow: ellipsis; /* Zeigt ... bei Überlauf */
+  }
+
+  .responsive-section span,
+  .card-content p {
+    font-size: 0.9em; /* Kleinere Schriftgröße für Text */
+  }
+
+  .header .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .header img {
+    margin-top: 100px;
+  }
+}
+
+/* Media Query für Bildschirmbreiten kleiner als 500px */
+@media (max-width: 500px) {
+  .responsive-section .container {
+    max-width: 100% !important;
+    padding: 20px; /* Adjust padding as needed */
+    text-align: left;
+  }
+
+  .responsive-section h1 {
+    font-size: 1em; /* Noch kleinere Schriftgröße für Überschriften */
+  }
+
+  .responsive-section span,
+  .card-content p {
+    font-size: 0.8em; /* Noch kleinere Schriftgröße für Text */
+  }
+
+  .responsive-section {
+    flex-direction: column; /* Vertikale Anordnung für mobile Geräte */
+  }
+}
+
+.responsive-section .container {
+  max-width: 50%; /* Setze maximale Breite für größere Geräte */
+}
+
+/* Media Query für Bildschirmbreiten größer als 500px */
+
+.card {
+  max-width: 400px; /* Maximalbreite der Karten */
+  margin: auto; /* Zentriert die Karten innerhalb ihrer Grid-Zellen */
+}
+
+/* Passt das Grid-Layout an, um eine bessere Anpassung an große Bildschirme zu gewährleisten */
+@media (min-width: 1024px) {
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Erstellt ein flexibles Grid, das Items bis zu 300px Breite aufnimmt */
+    gap: 20px;
+  }
+}
+
+.gallery-container {
+  background-color: #01053f !important;
+}
+.gallery-container {
+  background-color: #01053f !important;
+}

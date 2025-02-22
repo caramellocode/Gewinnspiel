@@ -1,0 +1,20 @@
+.breadcrumb-jackpott {
+    background-image: url('/images/home-1/realistic-casino-background-with-flying-chips-golden-coins-dice-ai_91128-2306.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: zoom 10s ease-in-out infinite;
+  }
+  
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

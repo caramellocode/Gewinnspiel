@@ -1,0 +1,65 @@
+/* Füge einen grauen Rahmen zu den Spiele-Containern hinzu */
+.facility-card {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    text-align: center;
+    transition: all 0.5s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #808080;
+}
+
+.facility-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.facility-card h4 {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.facility-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.facility-card:hover .facility-hover {
+  opacity: 1;
+}
+
+.facility-card:hover img {
+  opacity: 0.3;
+}
+
+.facility-hover p {
+  margin: 10px 0;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.facility-hover .arrow {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-top: 72px;
+}
+
+

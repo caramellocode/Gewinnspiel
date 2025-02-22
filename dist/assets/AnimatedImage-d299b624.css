@@ -1,0 +1,1 @@
+.animated-image{height:auto;transition:transform 1s ease-in-out;transform:translate(0)}.animated-image.in-view{transform:translate(200px)}.animated-image.in-view2{transform:translate(50px)}

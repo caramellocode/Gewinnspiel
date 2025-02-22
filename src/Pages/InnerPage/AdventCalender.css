@@ -1,0 +1,260 @@
+/* Importieren von Google Fonts, falls benötigt */
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
+/* Allgemeine Stile */
+body {
+  font-family: "Lobster", cursive;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.poker-highlight {
+  font-size: larger;
+}
+
+/* Stile für den Adventskalender */
+.adventskalender {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 120px;
+  color: rgb(24, 2, 2);
+  background-image: url("/images/home-1/huntergrund.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.calendar-day {
+  background-color: #00000073;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  cursor: pointer;
+  border: 1px dashed white;
+  width: 104px;
+  transition: all 0.3s ease;
+}
+
+.calendar-day.today {
+  background-color: red; /* Heutiges Türchen */
+}
+
+.door-animation {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  pointer-events: none; /* Keine Interaktion während der Animation */
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.left,
+.right {
+  width: 50%; /* Jede Tür nimmt die Hälfte des Türchens ein */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #d91031;
+  border: 1px solid #950d23;
+  box-sizing: border-box;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.left {
+  left: 0;
+  animation-name: open-left;
+}
+
+.right {
+  right: 0;
+  animation-name: open-right;
+}
+
+@keyframes open-left {
+  from {
+    transform: perspective(500px) rotateY(0deg);
+    transform-origin: 0% 50%;
+  }
+  to {
+    transform: perspective(500px) rotateY(-110deg);
+    transform-origin: 0% 50%;
+    background: #a70a24;
+    box-shadow: 10px 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes open-right {
+  from {
+    transform: perspective(500px) rotateY(0deg);
+    transform-origin: 100% 50%;
+  }
+  to {
+    transform: perspective(500px) rotateY(110deg);
+    transform-origin: 100% 50%;
+    background: #a70a24;
+    box-shadow: -10px 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgb(237, 235, 235);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background-color: darkred;
+}
+
+.btn-primary2 {
+  background-color: red !important;
+  border: 1px solid #c19d68 !important;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.3s;
+  font-family: inherit;
+  /* margin: 12px; */
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 6px;
+}
+
+@media (max-width: 500px) {
+  .calendar-day {
+    background-color: #00000073;
+    color: white;
+    font-size: 1rem; /* Kleinere Schriftgröße für kleine Bildschirme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px; /* Reduzierte Höhe */
+    cursor: pointer;
+    border: 1px dashed white;
+    width: 50px; /* Reduzierte Breite */
+    transition: all 0.3s ease;
+  }
+  .adlogo {
+    width: 300px;
+    padding-top: -10px;
+    margin-bottom: -48px !important;
+    margin-top: -136px !important;
+    padding-bottom: 12px;
+  }
+}
+
+
+.past-day img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.calendar-day-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.calendar-day.past-day img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.adlogo {
+  width: 300px;
+  padding-top: -10px;
+  margin-bottom: -48px;
+  margin-top: -99px;
+}
+
+
+.btn-primary2 {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary2:hover {
+  background-color: #0056b3;
+}
+
+.calendar-day-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+}
+
+
+
+

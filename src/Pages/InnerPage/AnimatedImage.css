@@ -1,0 +1,12 @@
+.animated-image {
+    height: auto;
+    transition: transform 1s ease-in-out;
+    transform: translateX(0px);
+}
+
+.animated-image.in-view {
+    transform: translateX(200px);
+}
+.animated-image.in-view2 {
+    transform: translateX(50px);
+}

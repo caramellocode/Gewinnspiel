@@ -1,0 +1,44 @@
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .button-container a {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .button-container a {
+      flex: none;
+    }
+  }
+
+  .btn-shared {
+    background-color: #c19c67; 
+    color: white; /* Oder die Farbe, die der Button-Text hat */
+    border: none;
+    padding: 10px 20px; /* Passe das Padding an, um das gleiche wie die Buttons zu haben */
+    font-size: 2xl; /* Passe die Schriftgröße an */
+    font-weight: 600; /* Passe die Schriftstärke an */
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-shared:hover {
+    background-color: #ddd; /* Passe die Hover-Farbe an */
+  }
+  
